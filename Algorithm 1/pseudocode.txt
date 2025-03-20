@@ -1,0 +1,25 @@
+## AUTHOR: Ryan Trinh  
+## LICENSE: MIT License  
+## CONTACT: rtrinh02@csu.fullerton.edu  
+## main.py
+
+Input: A list of edges, where each edge is represented as (u, v) indicating a movement from coordinate u to coordinate v.
+Output: "loop" if any cycle is found; otherwise, "there isn't a loop". 
+
+1. Create an empty mapping titled Parent
+
+2. For every edge(u, v) in the input list:
+    a. If u is not already in Parent, then assign Parent[u] = u
+    b. If v is not already in Parent, then assign Parent[v] = v
+
+3. Define a recursive function find(x):
+    If Parent[a] is not equal to x, then set Parent[x] = find(Parent[x]) 
+    Return Parent[x]
+
+4. Process each edge(u,v) in the list:
+    a. Compute RootU = Find(u)
+    b. Compute RootV = Find(v)
+    c. If RootU is equal to RootV, then output "loop" and quit.
+    d. If else, merge the two sets by updating Parent[RootV] = RootU
+
+5. After processing all the edges without detecting the cycle, output "there isn't a loop"

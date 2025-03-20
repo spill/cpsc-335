@@ -1,0 +1,22 @@
+Input: 
+* city_distances: [array] of distances between neighboring cities.  
+* fuel: [array] of gas available at each city in gallons.
+* miles per gallon: [integer] representing miles per gallon the car can travel.
+Output:
+* Index of the preferred starting city, such that starting with an empty tank and filling up at that city, the car can complete the circular tour with 0 or more gallons remaining, the car can complete the circular tour with 0 or more gallons remaining. 
+
+1. Initialize total_fuel_balance = 0
+2. Initialize current_fuel_balance = 0
+3. Initialize starting_city = 0
+4. For each city i from 0 to n - 1 (where n is the number of cities):
+    a. Calculate net_gain = (fuel[i] * mpg) - city_distance[i]
+    b. Set total_fuel_balance = total_fuel_balance + net_gain
+    c. Set current_fuel_balance = current_fuel_balance + net_gain
+    d. If current_fuel_balance < 0 then:
+        i. Set starting_city = i + 1
+        ii. Reset current_fuel_balance = 0
+
+5. If total_fuel_balance >= 0 then:
+        Return starting_city
+    Else:
+        Return -1 // (Though the problem guarantees exactly one valid starting city)

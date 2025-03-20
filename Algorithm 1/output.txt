@@ -1,0 +1,8 @@
+## AUTHOR: Ryan Trinh  
+## LICENSE: MIT License  
+## CONTACT: rtrinh02@csu.fullerton.edu  
+## main.py
+
+rtrinh02@DESKTOP-32PH758:/mnt/c/users/rtrin/documents/cpsc-335$ /bin/python3 "/mnt/c/users/rtrin/documents/cpsc-335/Algorithm 1/main.py"
+Sample 1 Output: Loop detected
+Sample 2 Output: No loop detected
