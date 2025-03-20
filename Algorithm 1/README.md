@@ -18,8 +18,6 @@ The algorithm models each coordinate as a node and each movement as an edge, usi
   - Uses **path compression** during the find operation.  
 - A cycle is detected when an edge connects two nodes that belong to the same set.  
 
----
-
 ## Files Included  
 - **`main.py`** — Python script containing the algorithm implementation.  
 - **`README.md`** — Provides an overview and instructions for the project.  
@@ -28,8 +26,8 @@ The algorithm models each coordinate as a node and each movement as an edge, usi
 - **Python 3.11**  
 
 ## How To Run  
-1. Ensure Python is installed.  
-2. Download or clone the repository:  
+1. Download Python 
+2. Clone repo  
    ```bash
    git clone <repository_url>
    cd <repository_name>

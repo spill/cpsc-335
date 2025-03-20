@@ -27,10 +27,12 @@ def detect_cycle(edges):
             parent[v] = v
 
     for u, v in edges:
+        # Find the roots for the vertices u and v
         root_u = find(parent, u)
         root_v = find(parent, v)
         if root_u == root_v:
             return "Loop detected"
+        #Merge the sets of u and v
         union(parent, root_u, root_v)
 
     return "No loop detected"

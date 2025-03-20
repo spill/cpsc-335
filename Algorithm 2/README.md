@@ -21,8 +21,8 @@ This implementation creates a greedy algorithm to determine the preferred starti
 - **Python 3.11**  
 
 ## How To Run  
-1. Ensure Python is installed.  
-2. Download or clone the repository:  
+1. Download Python 
+2. Clone repo  
    ```bash
    git clone <repository_url>
    cd <repository_name>
