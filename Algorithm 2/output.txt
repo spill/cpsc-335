@@ -1,0 +1,2 @@
+/python3 "/mnt/c/users/rtrin/documents/cpsc-335/cpsc-335/Algorithm 2/main.py"
+Preferred Starting City: 4

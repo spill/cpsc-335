@@ -3,34 +3,21 @@
 ## CONTACT: rtrinh02@csu.fullerton.edu  
 ## main.py
 
+#it returns the root of the set containing x
 def find(parent, x):
-    """
-    Function to find the root of x using path compression.
-    :param parent: Dictionary containing parent pointers for each node.
-    :param x: The node to find the root of.
-    :return: The root of x.
-    """
+
     if parent[x] != x:
         parent[x] = find(parent, parent[x])
     return parent[x]
-
+#the union function merges the sets containing elements x and y
 def union(parent, x, y):
-    """
-    Function to perform the union of the sets that x and y belong to.
-    :param parent: Dictionary containing parent pointers for each node.
-    :param x: First node.
-    :param y: Second node.
-    """
+# find the roots for x and y
     root_x = find(parent, x)
     root_y = find(parent, y)
     parent[root_y] = root_x
-
+# the detect_cycle function uses the union-find algo to detect cycles in an undirected graph
 def detect_cycle(edges):
-    """
-    Function to detect a cycle in the given list of edges.
-    :param edges: List of tuples representing the movements (edges) between coordinates.
-    :return: "Loop detected" if a cycle exists, otherwise "No loop detected".
-    """
+
     parent = {}
 
     for u, v in edges:
